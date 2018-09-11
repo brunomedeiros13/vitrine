@@ -1,0 +1,168 @@
+2018-08-13 16:06:19 Warning: Warning (512): Association property name "bairro" clashes with field of same name of table "empresas". You should explicitly specify the "propertyName" option. in [C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\ORM\Association.php, line 760]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\ORM\Association::getProperty() - CORE\src\ORM\Association.php, line 760
+Bake\Utility\Model\AssociationFilter::filterAssociations() - ROOT\vendor\cakephp\bake\src\Utility\Model\AssociationFilter.php, line 96
+Bake\Shell\Task\TemplateTask::_filteredAssociations() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 433
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 301
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 142
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-08-13 16:07:31 Error: [ParseError] syntax error, unexpected ')', expecting ']' in C:\xampp\htdocs\vitrine\src\Model\Table\EmpresasTable.php on line 51
+Stack Trace:
+#0 C:\xampp\htdocs\vitrine\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Model\\Table...')
+#2 [internal function]: spl_autoload_call('App\\Model\\Table...')
+#3 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Model\\Table...')
+#4 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Model\\Table\\Em...', 'App')
+#5 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(246): Cake\Core\App::className('Empresas', 'Model/Table', 'Table')
+#6 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(194): Cake\ORM\Locator\TableLocator->_getClassName('Empresas', Array)
+#7 C:\xampp\htdocs\vitrine\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(282): Cake\ORM\Locator\TableLocator->get('Empresas', Array)
+#8 C:\xampp\htdocs\vitrine\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#9 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('empresas')
+#10 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#12 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 C:\xampp\htdocs\vitrine\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2018-08-13 16:07:56 Warning: Warning (2): strpos() expects parameter 1 to be string, array given in [C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\ORM\Association.php, line 227]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+strpos - [internal], line ??
+Cake\ORM\Association::__construct() - CORE\src\ORM\Association.php, line 227
+Cake\ORM\AssociationCollection::load() - CORE\src\ORM\AssociationCollection.php, line 90
+Cake\ORM\Table::belongsTo() - CORE\src\ORM\Table.php, line 1133
+App\Model\Table\EmpresasTable::initialize() - APP/Model\Table\EmpresasTable.php, line 48
+Cake\ORM\Table::__construct() - CORE\src\ORM\Table.php, line 291
+Cake\ORM\Locator\TableLocator::_create() - CORE\src\ORM\Locator\TableLocator.php, line 257
+Cake\ORM\Locator\TableLocator::get() - CORE\src\ORM\Locator\TableLocator.php, line 224
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 282
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 142
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-08-13 16:07:56 Warning: Warning (2): strpos() expects parameter 1 to be string, array given in [C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\functions.php, line 97]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+strpos - [internal], line ??
+pluginSplit - CORE\src\Core\functions.php, line 97
+Cake\ORM\Association::__construct() - CORE\src\ORM\Association.php, line 231
+Cake\ORM\AssociationCollection::load() - CORE\src\ORM\AssociationCollection.php, line 90
+Cake\ORM\Table::belongsTo() - CORE\src\ORM\Table.php, line 1133
+App\Model\Table\EmpresasTable::initialize() - APP/Model\Table\EmpresasTable.php, line 48
+Cake\ORM\Table::__construct() - CORE\src\ORM\Table.php, line 291
+Cake\ORM\Locator\TableLocator::_create() - CORE\src\ORM\Locator\TableLocator.php, line 257
+Cake\ORM\Locator\TableLocator::get() - CORE\src\ORM\Locator\TableLocator.php, line 224
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 282
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 142
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-08-13 16:07:56 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\functions.php, line 98]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+explode - [internal], line ??
+pluginSplit - CORE\src\Core\functions.php, line 98
+Cake\ORM\Association::__construct() - CORE\src\ORM\Association.php, line 231
+Cake\ORM\AssociationCollection::load() - CORE\src\ORM\AssociationCollection.php, line 90
+Cake\ORM\Table::belongsTo() - CORE\src\ORM\Table.php, line 1133
+App\Model\Table\EmpresasTable::initialize() - APP/Model\Table\EmpresasTable.php, line 48
+Cake\ORM\Table::__construct() - CORE\src\ORM\Table.php, line 291
+Cake\ORM\Locator\TableLocator::_create() - CORE\src\ORM\Locator\TableLocator.php, line 257
+Cake\ORM\Locator\TableLocator::get() - CORE\src\ORM\Locator\TableLocator.php, line 224
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 282
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 142
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-08-14 01:13:39 Warning: Warning (512): Association property name "bairro" clashes with field of same name of table "empresas". You should explicitly specify the "propertyName" option. in [C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\ORM\Association.php, line 760]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\ORM\Association::getProperty() - CORE\src\ORM\Association.php, line 760
+Bake\Utility\Model\AssociationFilter::filterAssociations() - ROOT\vendor\cakephp\bake\src\Utility\Model\AssociationFilter.php, line 96
+Bake\Shell\Task\TemplateTask::_filteredAssociations() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 433
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 301
+Bake\Shell\Task\TemplateTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php, line 142
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 525
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-08-23 14:49:37 Error: [Cake\Core\Exception\MissingPluginException] Plugin CakeDC/Users could not be found. in C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\PluginCollection.php on line 182
+Exception Attributes: array (
+  'plugin' => 'CakeDC/Users',
+)
+Stack Trace:
+#0 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\Plugin.php(233): Cake\Core\PluginCollection->get('CakeDC/Users')
+#1 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Util\UtilTrait.php(71): Cake\Core\Plugin::path('CakeDC/Users')
+#2 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\ConfigurationTrait.php(65): Migrations\Command\Migrate->getOperationsPath(Object(Symfony\Component\Console\Input\ArgvInput))
+#3 C:\xampp\htdocs\vitrine\vendor\robmorgan\phinx\src\Phinx\Console\Command\AbstractCommand.php(92): Migrations\Command\Migrate->getConfig()
+#4 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Command\CommandTrait.php(64): Phinx\Console\Command\AbstractCommand->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\vitrine\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\vitrine\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\vitrine\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\vitrine\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\vitrine\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#14 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#16 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#17 C:\xampp\htdocs\vitrine\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#18 {main}
+
+
+2018-08-23 14:54:28 Error: [Cake\Core\Exception\MissingPluginException] Plugin CakeDC/Users could not be found. in C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\PluginCollection.php on line 182
+Exception Attributes: array (
+  'plugin' => 'CakeDC/Users',
+)
+Stack Trace:
+#0 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Core\Plugin.php(233): Cake\Core\PluginCollection->get('CakeDC/Users')
+#1 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Util\UtilTrait.php(71): Cake\Core\Plugin::path('CakeDC/Users')
+#2 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\ConfigurationTrait.php(65): Migrations\Command\Migrate->getOperationsPath(Object(Symfony\Component\Console\Input\ArgvInput))
+#3 C:\xampp\htdocs\vitrine\vendor\robmorgan\phinx\src\Phinx\Console\Command\AbstractCommand.php(92): Migrations\Command\Migrate->getConfig()
+#4 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Command\CommandTrait.php(64): Phinx\Console\Command\AbstractCommand->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\vitrine\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\vitrine\vendor\symfony\console\Command\Command.php(251): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\vitrine\vendor\symfony\console\Application.php(886): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\vitrine\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\vitrine\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#14 C:\xampp\htdocs\vitrine\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#16 C:\xampp\htdocs\vitrine\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#17 C:\xampp\htdocs\vitrine\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#18 {main}
+
+
