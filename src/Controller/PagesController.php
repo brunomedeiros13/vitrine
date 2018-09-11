@@ -10,6 +10,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Core\Configure;
 
 class PagesController extends AppController {
 
@@ -17,10 +18,11 @@ class PagesController extends AppController {
         parent::initialize();
 
         $this->Auth->allow(['home', 'finalizacao', 'contato']);
+        $this->set('titulo', Configure::read('Vitrine.nome'));
     }
 
     public function home() {
-        $this->set('title', 'Guia online de empresas e negócios em São José');
+        $this->set('title', 'Guia online de empresas e negócios em '.Configure::read('Vitrine.nome'));
         $this->viewBuilder()->setLayout('default-home');
         $this->loadModel('Categorias');
         $this->loadModel('Bairros');

@@ -30,7 +30,7 @@ $tituloSite = 'Vitrine São José';
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <h5>Vitrine São José</h5>
+                        <h5>Vitrine <?= $titulo ?></h5>
                         <ul class="lista-home"> 
                             <li><?= $this->Html->link('Destaques', ['controller' => 'empresas', 'action' => 'destaques']) ?></li>
                             <li><?= $this->Html->link('Categorias', ['controller' => 'categorias']) ?></li>

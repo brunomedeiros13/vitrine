@@ -15,7 +15,7 @@
         <div class="col-9">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><?= $this->Html->link('Vitrine São José', ['controller' => 'pages', 'action' => 'home']) ?></li>
+                    <li class="breadcrumb-item"><?= $this->Html->link('Vitrine'.$titulo, ['controller' => 'pages', 'action' => 'home']) ?></li>
                     <li class="breadcrumb-item active" aria-current="page"><?= $this->Html->link($empresa->categoria->nomecategoria, ['controller' => 'empresas', 'action' => 'pesquisar', 'categoria' => $empresa->categoria->nomecategoria]) ?></li>
                     <li class="breadcrumb-item active" aria-current="page"><?= $empresa->nomeempresa ?></li>
                 </ol>

@@ -1,10 +1,10 @@
 <?php
 /**
-  Layout Padrão do Site
-
-  Por Bruno Medeiros
+ * Layout Padrão do Site
+ * 
+ * Por Bruno Medeiros
  */
-$tituloSite = 'Vitrine São José';
+$tituloSite = 'Vitrine '.$titulo;
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,8 +12,7 @@ $tituloSite = 'Vitrine São José';
         <?= $this->Html->charset() ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            <?= $tituloSite ?> - 
-            <?= $title ?>
+            <?= $tituloSite ?> - <?= $title ?>
         </title>
         <?= $this->Html->meta('icon') ?>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -30,7 +29,6 @@ $tituloSite = 'Vitrine São José';
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
                     <span class="texto-procura">O que você está procurando?</span>
                     <?= $this->Form->create(null, ['valueSources' => 'query', 'url' => ['controller' => 'empresas', 'action' => 'pesquisar'], 'style' => 'margin-bottom: 0px']); ?>
@@ -38,7 +36,6 @@ $tituloSite = 'Vitrine São José';
                         <div class="col-9">
                             <?= $this->Form->control('q', ['class' => 'form-control mb-2', 'placeholder' => 'Ex: Restaurante ou Hotel', 'label' => FALSE]); ?>
                         </div>
-
                         <div class="col-2">
                             <?= $this->Form->button('Pesquisar', ['type' => 'submit', 'class' => 'btn btn-primary mb-2']); ?>
                         </div>
@@ -46,17 +43,12 @@ $tituloSite = 'Vitrine São José';
                     <?= $this->Form->end(); ?>
                 </div>
             </nav>
-
         </header>
-
         <div class="container">
-
             <?= $this->fetch('content') ?>
         </div> 
         <?php echo $this->element('footer'); ?>
-
     </body>
-
     <!-- JavaScript -->      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <?= $this->Html->script(['bootstrap.min', 'bootstrap.bundle.min', 'holder.min', 'jquery.mCustomScrollbar', 'jssocials', 'jquery.barrating.min']); ?>
@@ -70,7 +62,6 @@ $tituloSite = 'Vitrine São José';
                 });
             })(jQuery);
     </script>
-
     <script>
         (function ($) {
             $(window).on("load", function () {

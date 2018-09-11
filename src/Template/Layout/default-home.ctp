@@ -1,4 +1,3 @@
-<?php use Cake\Core\Configure; ?>
 <?php
 /*
  * Layout utilizado na página inicial do site
@@ -6,7 +5,7 @@
  * Criado por Bruno Medeiros
  */
 
-$tituloSite = 'Vitrine '.Configure::read('Vitrine.nome');
+$tituloSite = 'Vitrine '.$titulo;
 ?>
 <!DOCTYPE html>
 <html>

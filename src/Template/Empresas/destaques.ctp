@@ -1,4 +1,3 @@
-
 <br><br><br>
 <div class="publicidade-topo" style="margin-top: 80px;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -12,7 +11,7 @@
     </script>
 </div>
 <div class="categorias index large-9 medium-8 columns content">
-    <h3 style="margin-bottom: 40px"><i class="fas fa-star"></i> Empresas Destaques em São José</h3>
+    <h3 style="margin-bottom: 40px"><i class="fas fa-star"></i> Empresas Destaques em <?= $titulo ?></h3>
     <div class="row">
         <?php foreach ($empresas as $empresa): ?>
             <div class="col-md-3">
@@ -33,10 +32,10 @@
         <?php endforeach; ?>
     </div>
     <div class="jumbotron jumbotron-anuncio">
-        <h2 class="display-5">Seja um Destaque em São José</h2>
+        <h2 class="display-5">Seja um Destaque em <?= $titulo ?></h2>
         <p class="lead"></p>
         <hr class="my-4">
-        <p>No Vitrine São José você pode anunciar seu negócio e se tornar um destaque da região.</p>
+        <p>No Vitrine <?= $titulo ?> você pode anunciar seu negócio e se tornar um destaque da região.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Saiba Mais</a>
     </div>
 </div>

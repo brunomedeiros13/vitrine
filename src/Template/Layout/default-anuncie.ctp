@@ -4,7 +4,7 @@
 
   Por Bruno Medeiros
  */
-$tituloSite = 'Vitrine São José';
+$tituloSite = 'Vitrine '.$titulo;
 ?>
 <!DOCTYPE html>
 <html>

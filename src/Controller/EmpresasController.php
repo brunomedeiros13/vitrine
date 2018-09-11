@@ -19,12 +19,9 @@ class EmpresasController extends AppController {
         $this->loadComponent('Search.Prg', ['actions' => ['pesquisar']
         ]);
         $this->Auth->allow(['pesquisar', 'avaliar', 'view', 'destaques', 'anunciegratis', 'anuncie', 'adicionar']);
-    }
-    
-    public function beforeFilter(){
         $this->set('titulo', Configure::read('Vitrine.nome'));
     }
-
+    
     public function isAuthorized($user) {
         //Permissão de Administrador
         if ($user['role'] == 1) {

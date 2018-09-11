@@ -2,7 +2,7 @@
 <div class="container">
     <h2>Cadastre uma Empresa</h2>
     <br>
-    <p>Você pode cadastrar gratuitamente uma empresa no Vitrine São José.</p>
+    <p>Você pode cadastrar gratuitamente uma empresa no Vitrine <?= $titulo ?></p>
     <p>Primeiramente, faça uma busca pelo nome da empresa no site e verifique se ela não está cadastrada. Caso não esteja, preencha o formulário abaixo.</p>
     <p><b>Muito rápido e fácil!</b> Qualquer dúvida, entre em contato conosco, através do e-mail <a href="mailto:contato@vitrinesaojose.com.br">contato@vitrinesaojose.com.br</a>.</p>
     <br>
@@ -49,8 +49,8 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Cidade</label>
-                        <?php echo $this->Form->control('cidade', ['class' => 'form-control', 'label' => FALSE, 'disabled' => true, 'value' => 'São José']); ?>
-                        <?php echo $this->Form->control('cidade', ['type' => 'hidden', 'label' => FALSE, 'value' => 'São José']); ?>
+                        <?php echo $this->Form->control('cidade', ['class' => 'form-control', 'label' => FALSE, 'disabled' => true, 'value' => $titulo]); ?>
+                        <?php echo $this->Form->control('cidade', ['type' => 'hidden', 'label' => FALSE, 'value' => $titulo]); ?>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Estado</label>

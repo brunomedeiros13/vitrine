@@ -10,12 +10,14 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Core\Configure;
 
 class UsersController extends AppController {
 
     public function initialize() {
         parent::initialize();
         $this->Auth->allow(['login', 'logout', 'assineagora']);
+        $this->set('titulo', Configure::read('Vitrine.nome'));
     }
 
     public function isAuthorized($user) {

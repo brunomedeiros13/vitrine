@@ -10,12 +10,14 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Core\Configure;
 
 class CategoriasController extends AppController {
 
     public function initialize() {
         parent::initialize();
         $this->Auth->allow(['index']);
+        $this->set('titulo', Configure::read('Vitrine.nome'));
     }
 
     public function isAuthorized($user) {

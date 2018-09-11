@@ -25,12 +25,12 @@
     <br>
 </main>
 
-<div class="container" style="position: relative;font-family: 'Open Sans'">
-    <?php echo $this->Html->image('divulgue.jpg',['url' => ['controller' => 'empresas','action' => 'anuncie']]); ?>
+<div class="container d-none d-md-none d-lg-block d-xl-block" style="position: relative;font-family: 'Open Sans';text-shadow: black 1px 2px">
+    <?php echo $this->Html->image('divulgue.jpg', ['url' => ['controller' => 'empresas', 'action' => 'anuncie']]); ?>
     <div class="bottom-left">Divulgue seu negócio<br><span class="abaixo">no Vitrine São José</span></div>
-    <?php echo $this->Html->image('comida.jpg',['url' => ['controller' => 'empresas','action' => 'pesquisar?q=comer',]]); ?>
+    <?php echo $this->Html->image('comida.jpg', ['url' => ['controller' => 'empresas', 'action' => 'pesquisar?q=comer',]]); ?>
     <div class="bottom-mid">Comer<br><span class="abaixo">em São José</span></div>
-    <?php echo $this->Html->image('hotel.jpg',['url' => ['controller' => 'empresas','action' => 'pesquisar?categoria=Hotéis']]); ?>
+    <?php echo $this->Html->image('hotel.jpg', ['url' => ['controller' => 'empresas', 'action' => 'pesquisar?categoria=Hotéis']]); ?>
     <div class="bottom-right">Hospedagem<br><span class="abaixo">em São José</span></div>
     <div style="vertical-align: middle; border-style: none;display: inline-flex;">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -53,7 +53,7 @@
          data-ad-client="ca-pub-1536717510867925"
          data-ad-slot="1182329121"></ins>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
 
@@ -204,6 +204,6 @@
          data-ad-client="ca-pub-1536717510867925"
          data-ad-slot="1182329121"></ins>
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>

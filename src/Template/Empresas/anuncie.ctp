@@ -1,8 +1,8 @@
 <div style="margin-top: 100px"></div>
 <div class="container">
-    <h2>Anuncie no Vitrine São José</h2>
+    <h2>Anuncie no Vitrine <?= $titulo ?></h2>
     <hr>
-    <p>Você pode cadastrar sua empresa no Vitrine São José de duas maneiras diferentes: através do cadastro gratuito ou assinando um <b>Plano Destaque</b>.</p>
+    <p>Você pode cadastrar sua empresa no Vitrine <?= $titulo ?> de duas maneiras diferentes: através do cadastro gratuito ou assinando um <b>Plano Destaque</b>.</p>
     <h5>Cadastro Gratuito</h5>
     <p>O cadastro gratuito garante as informações básicas do negócio, como endereço e telefone, além de possibilitar a visualização através de mapa, bem como permitir que usuários do site possam avaliar a empresa.</p>
     <br>

@@ -50,8 +50,8 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><?= $this->Html->link('Vitrine São José', ['controller' => 'pages', 'action' => 'home']) ?></li>
-                <?php if ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') == NULL AND $this->request->getQuery('bairro') == NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">Pesquisa por: <span style="text-transform: capitalize">"' . $this->request->getQuery('q') . '"</span> em São José</li>'; ?>
+                <li class="breadcrumb-item"><?= $this->Html->link('Vitrine '.$titulo, ['controller' => 'pages', 'action' => 'home']) ?></li>
+                <?php if ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') == NULL AND $this->request->getQuery('bairro') == NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">Pesquisa por: <span style="text-transform: capitalize">"' . $this->request->getQuery('q') . '"</span> em '.$titulo.'</li>'; ?>
                 <?php } elseif ($this->request->getQuery('q') == NULL AND $this->request->getQuery('categoria') != NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">' . $this->request->getQuery('categoria') . "</li>"; ?>
                 <?php } elseif ($this->request->getQuery('q') == NULL AND $this->request->getQuery('bairro') != NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">' . $this->request->getQuery('bairro') . "</li>"; ?>
                     <?php } elseif ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') != NULL) { ?><li class="breadcrumb-item active" aria-current="page"><?= $this->Html->link($this->request->getQuery('categoria'), ['action' => 'pesquisar', 'categoria' => $this->request->getQuery('categoria')]) ?></li><li class="breadcrumb-item active" aria-current="page"><?= 'Pesquisa por: "' . $this->request->getQuery('q').'"'; ?></li>
@@ -71,7 +71,7 @@
                         <li>Modifique os termos buscados.</li>
                         <li>Utilize nomes mais genéricos.</li>
                     </ul>
-                    <p class="mb-0">Se você conhece alguma empresa que não está sendo apresentada, <?= $this->Html->link('inclua gratuitamente no Guia São José', ['action' => 'add']) ?>.</p>
+                    <p class="mb-0">Se você conhece alguma empresa que não está sendo apresentada, <?= $this->Html->link('inclua gratuitamente no Vitrine '.$titulo, ['action' => 'add']) ?>.</p>
                 </div>
             <?php } ?>
             <?php $cont = 0; ?>
