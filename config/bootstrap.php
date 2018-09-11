@@ -199,3 +199,5 @@ Plugin::load('Sluggable',['autoload' => true]);
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
+
+Configure::write('Vitrine.nome','São José');

@@ -34,7 +34,7 @@ class BairrosController extends AppController {
 
     public function admin() {
         $this->set('title', 'Painel Administrativo');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $bairros = $this->paginate($this->Bairros->find('all'));
         $this->set(compact('bairros'));
     }
@@ -60,7 +60,7 @@ class BairrosController extends AppController {
 
     public function edit($id = null) {
         $this->set('title', 'Painel Administrativo');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $bairro = $this->Bairros->get($id, [
             'contain' => []
         ]);

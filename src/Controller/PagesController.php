@@ -16,12 +16,12 @@ class PagesController extends AppController {
     public function initialize() {
         parent::initialize();
 
-        $this->Auth->allow(['home', 'finalizacao']);
+        $this->Auth->allow(['home', 'finalizacao', 'contato']);
     }
 
     public function home() {
         $this->set('title', 'Guia online de empresas e negócios em São José');
-        $this->viewBuilder()->layout('default-home');
+        $this->viewBuilder()->setLayout('default-home');
         $this->loadModel('Categorias');
         $this->loadModel('Bairros');
         $this->loadModel('Empresas');
@@ -36,7 +36,16 @@ class PagesController extends AppController {
 
     public function finalizacao() {
         $this->set('title', 'Anúncio criado com sucesso!');
-        $this->viewBuilder()->layout('default-finalizacao');
+        $this->viewBuilder()->setLayout('default-finalizacao');
+    }
+
+    public function contato() {
+        $this->set('title', 'Fale Conosco');
+        $this->viewBuilder()->setLayout('default-anuncie');
+        if ($this->request->is('post')) {
+            $this->Flash->sucesso('Sua mensagem foi enviada com sucesso. Por favor, aguarde nosso retorno.');
+            return $this->redirect($this->referer());
+        }
     }
 
 }

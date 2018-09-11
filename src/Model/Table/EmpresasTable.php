@@ -75,7 +75,7 @@ class EmpresasTable extends Table {
                     'comparison' => 'LIKE',
                     'wildcardAny' => '*',
                     'wildcardOne' => '?',
-                    'field' => ['nomeempresa', 'Categorias.nomecategoria', 'Bairros.nomeBairro']
+                    'field' => ['nomeempresa', 'Categorias.nomecategoria', 'Bairros.nomeBairro','Categorias.tag']
                 ])
                 ->add('bairro', 'Search.Like', [
                     'before' => true,

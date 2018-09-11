@@ -58,7 +58,7 @@
                     <?php } ?>
 
                     <?php if ($empresa->site != '' OR $empresa->destaque == 1) { ?>
-                        <p class="card-text" style="margin-top: 5px !important">
+                        <p class="card-text" style="margin-top: 10px !important">
                             <?php if ($empresa->site != '') { ?> 
                                 <a href="http://<?= $empresa->site ?>" class="btn btn-secondary" target="_blank"><i class="fas fa-external-link-alt"></i> Site</a>
                             <?php } ?>
@@ -248,18 +248,40 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <?= $this->Form->create(null, ['url' => ['action' => 'sugeriredicao']]) ?>
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Sugerir uma Edição</h5>
+                <h5 class="modal-title" id="tituloEnviar">Sugerir edição em <?= $empresa->nomeempresa ?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
+            <div class="modal-body">                
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <?php echo $this->Form->control('nome', ['class' => 'form-control', 'label' => FALSE, 'placeholder' => 'Nome']); ?>
+                    </div>
+                </div>   
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <?php echo $this->Form->control('email', ['class' => 'form-control', 'label' => FALSE, 'placeholder' => 'E-Mail']); ?>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <?php echo $this->Form->control('telefone', ['class' => 'form-control', 'label' => FALSE, 'placeholder' => 'Telefone']); ?>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <?php echo $this->Form->control('texto', ['class' => 'form-control', 'label' => FALSE, 'placeholder' => 'Mensagem', 'type' => 'textarea']); ?>
+                    </div>
+                </div> 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Enviar</button>
+                <?= $this->Form->control('id', ['type' => 'hidden', 'value' => $empresa->id]) ?>
+                <?= $this->Form->button('Salvar', ['class' => 'btn btn-primary']) ?>
+                <?= $this->Form->end() ?>
             </div>
         </div>
     </div>

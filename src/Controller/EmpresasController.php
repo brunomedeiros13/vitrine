@@ -10,6 +10,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Core\Configure;
 
 class EmpresasController extends AppController {
 
@@ -18,6 +19,10 @@ class EmpresasController extends AppController {
         $this->loadComponent('Search.Prg', ['actions' => ['pesquisar']
         ]);
         $this->Auth->allow(['pesquisar', 'avaliar', 'view', 'destaques', 'anunciegratis', 'anuncie', 'adicionar']);
+    }
+    
+    public function beforeFilter(){
+        $this->set('titulo', Configure::read('Vitrine.nome'));
     }
 
     public function isAuthorized($user) {
@@ -36,7 +41,7 @@ class EmpresasController extends AppController {
     public function index() {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $empresas = $this->paginate($this->Empresas->find('all', ['contain' => ['Categorias', 'Bairros', 'Comentarios']]));
         $this->set(compact('empresas'));
     }
@@ -44,7 +49,7 @@ class EmpresasController extends AppController {
     public function alteraativa($id, $ativa) {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $empresa = $this->Empresas->get($id);
         if ($ativa == 1) {
             $empresa->ativa = '0';
@@ -59,7 +64,7 @@ class EmpresasController extends AppController {
     public function alteradestaque($id, $destaque) {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $empresa = $this->Empresas->get($id);
         if ($destaque == 1) {
             $empresa->destaque = '0';
@@ -90,7 +95,7 @@ class EmpresasController extends AppController {
 
     public function add() {
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $this->loadModel('Categorias');
         $empresa = $this->Empresas->newEntity();
         $categorias = $this->Empresas->Categorias->find('list', ['valueField' => 'nomecategoria', 'order' => 'nomecategoria ASC']);
@@ -114,7 +119,7 @@ class EmpresasController extends AppController {
 
     public function anunciegratis() {
         $this->set('title', 'Anuncie grátis em São José');
-        $this->viewBuilder()->layout('default-anuncie');
+        $this->viewBuilder()->setLayout('default-anuncie');
         $this->loadModel('Categorias');
         $empresa = $this->Empresas->newEntity();
         $categorias = $this->Empresas->Categorias->find('list', ['valueField' => 'nomecategoria', 'order' => 'nomecategoria ASC']);
@@ -138,7 +143,7 @@ class EmpresasController extends AppController {
 
     public function edit($id = null, $slug = null) {
         $this->set('title', 'Editar Anúncio');
-        $this->viewBuilder()->layout('default-central');
+        $this->viewBuilder()->setLayout('default-central');
         $empresa = $this->Empresas->get($id, [
             'contain' => ['Categorias', 'Bairros']
         ]);
@@ -165,7 +170,7 @@ class EmpresasController extends AppController {
     public function editaradmin($id = null, $slug = null) {
         //Somente para Administrador
         $this->set('title', 'Editar Anúncio');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         if ($this->Auth->user('role') != '1') {
             return $this->redirect(['controller' => 'pages', 'action' => 'home']);
         }
@@ -259,19 +264,19 @@ class EmpresasController extends AppController {
 
     public function meusanuncios() {
         $this->set('title', 'Meus Anúncios');
-        $this->viewBuilder()->layout('default-central');
+        $this->viewBuilder()->setLayout('default-central');
         $empresas = $this->Empresas->find('all', ['conditions' => ['user_id' => $this->Auth->user('id')], ['contain' => ['Categorias', 'Comentarios']]]);
         $this->set(compact('empresas'));
     }
 
     public function anuncie() {
         $this->set('title', 'Anuncie em São José');
-        $this->viewBuilder()->layout('default-anuncie');
+        $this->viewBuilder()->setLayout('default-anuncie');
     }
 
     public function adicionar() {
         $this->set('title', 'Novo Anúncio');
-        $this->viewBuilder()->layout('default-anuncie');
+        $this->viewBuilder()->setLayout('default-anuncie');
         $empresa = $this->Empresas->newEntity();
         $bairros = $this->Empresas->Bairros->find('list', ['valueField' => 'nomeBairro', 'order' => 'nomeBairro']);
         $categorias = $this->Empresas->Categorias->find('list', ['valueField' => 'nomecategoria', 'order' => 'nomecategoria']);

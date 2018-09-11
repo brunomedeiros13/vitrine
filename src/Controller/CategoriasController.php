@@ -35,7 +35,7 @@ class CategoriasController extends AppController {
     public function admin() {
         //Somente Administrador
         $this->set('title', 'Painel Administrativo');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $categorias = $this->paginate($this->Categorias->find('all'));
         $this->set(compact('categorias'));
     }
@@ -55,7 +55,7 @@ class CategoriasController extends AppController {
     public function edit($id = null) {
         //Somente Administrador
         $this->set('title', 'Painel Administrativo');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $categoria = $this->Categorias->get($id, [
             'contain' => []
         ]);

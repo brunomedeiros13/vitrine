@@ -34,14 +34,14 @@ class UsersController extends AppController {
     public function index() {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $users = $this->paginate($this->Users, ['contain' => ['Empresas']]);
         $this->set(compact('users'));
     }
 
     public function meuusuario() {
         $this->set('title', 'Meu Usuário');
-        $this->viewBuilder()->layout('default-central');
+        $this->viewBuilder()->setLayout('default-central');
         $user = $this->Users->get($this->Auth->user('id'), [
             'contain' => []
         ]);
@@ -59,7 +59,7 @@ class UsersController extends AppController {
     public function add() {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -92,7 +92,7 @@ class UsersController extends AppController {
     public function editaradmin($id = null) {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
@@ -110,7 +110,7 @@ class UsersController extends AppController {
     public function alterarsenha($id = null) {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
@@ -139,7 +139,7 @@ class UsersController extends AppController {
 
     public function login() {
         $this->set('title', 'Central do Anunciante');
-        $this->viewBuilder()->layout('default-login');
+        $this->viewBuilder()->setLayout('default-login');
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -160,7 +160,7 @@ class UsersController extends AppController {
 
     public function assineagora() {
         $this->set('title', 'Assine Agora');
-        $this->viewBuilder()->layout('default-anuncie');
+        $this->viewBuilder()->setLayout('default-anuncie');
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());

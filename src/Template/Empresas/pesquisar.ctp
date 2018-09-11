@@ -51,11 +51,11 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><?= $this->Html->link('Vitrine São José', ['controller' => 'pages', 'action' => 'home']) ?></li>
-                <?php if ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') == NULL AND $this->request->getQuery('bairro') == NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">Pesquisa por: "' . $this->request->getQuery('q') . '"</li>'; ?>
+                <?php if ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') == NULL AND $this->request->getQuery('bairro') == NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">Pesquisa por: <span style="text-transform: capitalize">"' . $this->request->getQuery('q') . '"</span> em São José</li>'; ?>
                 <?php } elseif ($this->request->getQuery('q') == NULL AND $this->request->getQuery('categoria') != NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">' . $this->request->getQuery('categoria') . "</li>"; ?>
                 <?php } elseif ($this->request->getQuery('q') == NULL AND $this->request->getQuery('bairro') != NULL) { ?><?= '<li class="breadcrumb-item active" aria-current="page">' . $this->request->getQuery('bairro') . "</li>"; ?>
-                    <?php } elseif ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') != NULL) { ?><li class="breadcrumb-item active" aria-current="page"><?= $this->Html->link($this->request->getQuery('categoria'), ['action' => 'pesquisar', 'categoria' => $this->request->getQuery('categoria')]) ?></li><li class="breadcrumb-item active" aria-current="page"><?= 'Pesquisa por: "' . $this->request->getQuery('q'); ?></li>
-                <?php } elseif ($this->request->getQuery('q') != NULL AND $this->request->getQuery('bairro') != NULL) { ?><li class="breadcrumb-item active" aria-current="page"><?= $this->Html->link($this->request->getQuery('bairro'), ['action' => 'pesquisar', 'bairro' => $this->request->getQuery('bairro')]) ?></li><li class="breadcrumb-item active" aria-current="page"><?= 'Pesquisa por: "' . $this->request->getQuery('q'); ?></li><?php } ?>
+                    <?php } elseif ($this->request->getQuery('q') != NULL AND $this->request->getQuery('categoria') != NULL) { ?><li class="breadcrumb-item active" aria-current="page"><?= $this->Html->link($this->request->getQuery('categoria'), ['action' => 'pesquisar', 'categoria' => $this->request->getQuery('categoria')]) ?></li><li class="breadcrumb-item active" aria-current="page"><?= 'Pesquisa por: "' . $this->request->getQuery('q').'"'; ?></li>
+                <?php } elseif ($this->request->getQuery('q') != NULL AND $this->request->getQuery('bairro') != NULL) { ?><li class="breadcrumb-item active" aria-current="page"><?= $this->Html->link($this->request->getQuery('bairro'), ['action' => 'pesquisar', 'bairro' => $this->request->getQuery('bairro')]) ?></li><li class="breadcrumb-item active" aria-current="page"><?= 'Pesquisa por: "' . $this->request->getQuery('q').'"'; ?></li><?php } ?>
             </ol>
         </nav>
         <div class="empresas index large-9 medium-8 columns content">
@@ -164,7 +164,7 @@
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
                         <?php
-                        $this->Paginator->templates([
+                        $this->Paginator->setTemplates([
                             'prevActive' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',
                             'prevDisabled' => '<li class="page-item disabled"><a class="page-link" href="{{url}}">{{text}}</a></li>',
                             'number' => '<li class="page-item"><a class="page-link" href="{{url}}">{{text}}</a></li>',

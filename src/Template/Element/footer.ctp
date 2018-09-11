@@ -7,7 +7,7 @@
                     <li><?= $this->Html->link('Destaques', ['controller' => 'empresas','action' => 'destaques']) ?></li>
                     <li><?= $this->Html->link('Categorias', ['controller' => 'categorias']) ?></li>
                     <li><?= $this->Html->link('Bairros', ['controller' => 'bairros']) ?></li>
-                    <li><?= $this->Html->link('Fale Conosco', ['controller' => 'categorias']) ?></li>
+                    <li><?= $this->Html->link('Fale Conosco', ['controller' => 'pages','action' => 'contato']) ?></li>
                 </ul>
             </div>
             <div class="col-4">

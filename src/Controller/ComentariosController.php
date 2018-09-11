@@ -24,7 +24,7 @@ class ComentariosController extends AppController {
     public function avaliacoes($id) {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
-        $this->viewBuilder()->layout('default-administrador');
+        $this->viewBuilder()->setLayout('default-administrador');
         $this->loadModel('Empresas');
         $comentarios = $this->paginate($this->Comentarios->find('all', ['conditions' => ['empresas_id' => $id], 'contain' => ['Empresas']]));
         $empresa = $this->Empresas->get($id);
