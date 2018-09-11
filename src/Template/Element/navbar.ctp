@@ -1,6 +1,6 @@
 <div class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark">
     <div class="container d-flex justify-content-between">
-        <b><?= $this->Html->link('Vitrine São José', ['controller' => 'pages', 'action' => 'home'], ['class' => 'navbar-brand d-flex align-items-center']) ?></b>
+        <b><?= $this->Html->link('Vitrine '.$titulo, ['controller' => 'pages', 'action' => 'home'], ['class' => 'navbar-brand d-flex align-items-center']) ?></b>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

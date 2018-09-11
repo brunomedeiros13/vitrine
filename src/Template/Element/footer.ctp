@@ -24,7 +24,7 @@
         </div>
         <div class="row text-center">
             <div class="col-12">
-                <p>Vitrine São José 2018 | Todos os direitos reservados.</p>
+                <p>Vitrine <?= $titulo ?> 2018 | Todos os direitos reservados.</p>
             </div>
         </div>
     </div>

@@ -24,7 +24,6 @@
     </section>
     <br>
 </main>
-
 <div class="container d-none d-md-none d-lg-block d-xl-block" style="position: relative;font-family: 'Open Sans';text-shadow: black 1px 2px">
     <?php echo $this->Html->image('divulgue.jpg', ['url' => ['controller' => 'empresas', 'action' => 'anuncie']]); ?>
     <div class="bottom-left">Divulgue seu negócio<br><span class="abaixo">no Vitrine São José</span></div>
@@ -44,7 +43,6 @@
         </script>
     </div>
 </div>
-<br>
 <div class="publicidade-topo" style="margin-top: 10px;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Cabe -->
@@ -56,7 +54,7 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-
+<br>
 <div class="container">
     <?= $this->Flash->render() ?>
     <?php if ($totaldestaques > 0) { ?>

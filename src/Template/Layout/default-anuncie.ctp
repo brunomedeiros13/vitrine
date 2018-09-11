@@ -4,7 +4,7 @@
 
   Por Bruno Medeiros
  */
-$tituloSite = 'Vitrine '.$titulo;
+$tituloSite = 'Vitrine ' . $titulo;
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,8 +18,7 @@ $tituloSite = 'Vitrine '.$titulo;
         <?= $this->Html->meta('icon') ?>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <?= $this->Html->css(['bootstrap.min', 'album', 'default', 'jquery.mCustomScrollbar.min', 'jssocials', 'jssocials-theme-flat', 'fontawesome-stars']); ?>
-
-
+        <?= $this->Html->meta('description', 'Guia online de negócios e empresas de São José - SC. Encontre restaurantes, hotéis, lanchonetes, academias e muito mais.'); ?>
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
         <?= $this->fetch('script') ?>
@@ -80,7 +79,7 @@ $tituloSite = 'Vitrine '.$titulo;
             });
         });
     </script>
-        <script type="text/javascript">
+    <script type="text/javascript">
         $(".empresas-destaque").click(function () {
             window.location = $(this).find("a").attr("href");
             return false;

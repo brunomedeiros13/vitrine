@@ -4,7 +4,7 @@
  * 
  * Por Bruno Medeiros
  */
-$tituloSite = 'Vitrine '.$titulo;
+$tituloSite = 'Vitrine ' . $titulo;
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,9 +18,7 @@ $tituloSite = 'Vitrine '.$titulo;
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <?= $this->Html->css(['bootstrap.min', 'album', 'default', 'jquery.mCustomScrollbar.min', 'jssocials', 'jssocials-theme-flat', 'fontawesome-stars']); ?>
         <?= $this->Html->script(['jquery-3.3.1.min']); ?>
-        <?= $this->fetch('meta') ?>
-        <?= $this->fetch('css') ?>
-        <?= $this->fetch('script') ?>
+        <?= $this->Html->meta('description', 'Guia online de negócios e empresas de São José - SC. Encontre restaurantes, hotéis, lanchonetes, academias e muito mais.'); ?>
     </head>
     <body>
         <header>
@@ -53,14 +51,14 @@ $tituloSite = 'Vitrine '.$titulo;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <?= $this->Html->script(['bootstrap.min', 'bootstrap.bundle.min', 'holder.min', 'jquery.mCustomScrollbar', 'jssocials', 'jquery.barrating.min']); ?>
     <script>
-            (function ($) {
-                $(window).on("load", function () {
-                    $("#categorias").mCustomScrollbar({
-                        setHeight: 180,
-                        theme: "dark"
-                    });
+        (function ($) {
+            $(window).on("load", function () {
+                $("#categorias").mCustomScrollbar({
+                    setHeight: 180,
+                    theme: "dark"
                 });
-            })(jQuery);
+            });
+        })(jQuery);
     </script>
     <script>
         (function ($) {

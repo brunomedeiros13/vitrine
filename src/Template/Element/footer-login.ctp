@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <h5>Vitrine São José</h5>
+                <h5>Vitrine <?= $titulo ?></h5>
                 <ul class="lista-home"> 
                     <li><?= $this->Html->link('Destaques', ['controller' => 'empresas','action' => 'destaques']) ?></li>
                     <li><?= $this->Html->link('Categorias', ['controller' => 'categorias']) ?></li>
@@ -24,7 +24,7 @@
         </div>
         <div class="row text-center">
             <div class="col-12">
-                <p>Vitrine São José 2018 | Todos os direitos reservados.</p>
+                <p>Vitrine <?= $titulo ?> 2018 | Todos os direitos reservados.</p>
             </div>
         </div>
     </div>

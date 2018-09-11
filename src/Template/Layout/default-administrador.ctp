@@ -17,13 +17,14 @@ $tituloSite = 'Vitrine '.$titulo;
         <?= $this->Html->meta('icon') ?>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <?= $this->Html->css(['bootstrap.min', 'dashboard']); ?>
+        <?= $this->Html->meta('description', 'Guia online de negócios e empresas de São José - SC. Encontre restaurantes, hotéis, lanchonetes, academias e muito mais.'); ?>
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
         <?= $this->fetch('script') ?>
     </head>
     <body>
         <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/vitrine" target="_blank">Vitrine São José</a>
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/vitrine" target="_blank">Vitrine <?= $titulo ?></a>
 
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
