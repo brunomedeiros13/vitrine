@@ -1,0 +1,6 @@
+{
+    "require": {
+        "muffin/slug": "^1.4",
+        "cakedc/users": "^7.0"
+    }
+}
