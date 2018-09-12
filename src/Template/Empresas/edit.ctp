@@ -79,8 +79,8 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Cidade</label>
-                        <?php echo $this->Form->control('cidade', ['class' => 'form-control', 'label' => FALSE, 'disabled' => true, 'value' => 'São José']); ?>
-                        <?php echo $this->Form->control('cidade', ['type' => 'hidden', 'label' => FALSE, 'value' => 'São José']); ?>
+                        <?php echo $this->Form->control('cidade', ['class' => 'form-control', 'label' => FALSE, 'disabled' => true, 'value' => $titulo]); ?>
+                        <?php echo $this->Form->control('cidade', ['type' => 'hidden', 'label' => FALSE, 'value' => $titulo]); ?>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Estado</label>

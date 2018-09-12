@@ -27,7 +27,7 @@ class UsersController extends AppController {
         }
         //Permissão de Usuário Logado
         $action = $this->request->getParam('action');
-        if (in_array($action, ['meuusuario'])) {
+        if (in_array($action, ['meuusuario','alterarsenhauser'])) {
             return true;
         }
         return false;
@@ -113,6 +113,23 @@ class UsersController extends AppController {
         //Somente para Administrador
         $this->set('title', 'Painel de Administrador');
         $this->viewBuilder()->setLayout('default-administrador');
+        $user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('A senha do usuária foi alterada com sucesso.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        }
+        $this->set(compact('user'));
+    }
+
+    public function alterarsenhauser($id = null) {        
+        $this->set('title', 'Alterar Senha');
+        $this->viewBuilder()->setLayout('default-central');
         $user = $this->Users->get($id, [
             'contain' => []
         ]);

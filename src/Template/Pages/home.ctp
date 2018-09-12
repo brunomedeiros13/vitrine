@@ -43,7 +43,8 @@
         </script>
     </div>
 </div>
-<div class="publicidade-topo" style="margin-top: 10px;">
+<br>
+<div class="publicidade-topo" style="margin-top: 5px;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Cabe -->
     <ins class="adsbygoogle"

@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Meu Usuário</h1>
+    <h1 class="h2">Meu Usuário <?php echo $this->Html->link('<i class="fas fa-key"></i> Alterar Senha', ['action' => 'alterarsenhauser'], ['escape' => false, 'class' => 'btn btn-secondary btn-sm', 'style' => 'margin-bottom: 5px']); ?></h1>
 </div>
 
 
